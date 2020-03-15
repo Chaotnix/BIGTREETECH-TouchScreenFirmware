@@ -76,7 +76,7 @@
  * expansion port and have it work seamlessly no matter which mode the TFT is in.
  * Only for TFT24 V1.1, TFT35 V3.0 or TFT28 V3.0
  */
-//#define CLEAN_MODE_SWITCHING_SUPPORT  // Enable CLEAN MODE SWITCHING SUPPORT
+#define CLEAN_MODE_SWITCHING_SUPPORT  // Enable CLEAN MODE SWITCHING SUPPORT
 
 /**
  * DEFAULT STARTUP KNOB LED COLOR
@@ -86,7 +86,7 @@
  * Default value is: 1 for LED_OFF
  *
 */
-#define STARTUP_KNOB_LED_COLOR 1 //LED_OFF
+#define STARTUP_KNOB_LED_COLOR 7 //LED_OFF
 
 //===========================================================================
 //============================ TFT Mode Settings ============================
@@ -112,8 +112,8 @@
 #define FAN_NUM      1    // set in 1~6
 
 //                       PLA      PETG       ABS
-#define PREHEAT_BED      {60,      70,       100}
-#define PREHEAT_HOTEND   {200,     250,      230}
+#define PREHEAT_BED      {50,      70,       100}
+#define PREHEAT_HOTEND   {200,     230,      230}
 
 #define HEAT_MAX_TEMP    {150,    275,       275,       275,       275,       275,       275}    //max temperature can be set
 #define HEAT_SIGN_ID     {"B:",   "T0:",     "T1:",     "T2:",     "T3:",     "T4:",     "T5:"}
@@ -145,7 +145,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS 235
 #define Y_MAX_POS 235
-#define Z_MAX_POS 250
+#define Z_MAX_POS 230
 
 // Specify a pause position as { X, Y, Z_raise }
 #define NOZZLE_PAUSE_RETRACT_LENGTH 15   // (mm)
@@ -166,14 +166,14 @@
 #endif
 
 // Move to four corner points to Leveling manually (Point 1, Point 2, Point 3, Point 4)
-#define LEVELING_POINT_1_X         (X_MIN_POS + 20)
-#define LEVELING_POINT_1_Y         (Y_MIN_POS + 20)
-#define LEVELING_POINT_2_X         (X_MAX_POS - 20)
-#define LEVELING_POINT_2_Y         (Y_MIN_POS + 20)
-#define LEVELING_POINT_3_X         (X_MAX_POS - 20)
-#define LEVELING_POINT_3_Y         (Y_MAX_POS - 20)
-#define LEVELING_POINT_4_X         (X_MIN_POS + 20)
-#define LEVELING_POINT_4_Y         (Y_MAX_POS - 20)
+#define LEVELING_POINT_1_X         (X_MIN_POS + 50)
+#define LEVELING_POINT_1_Y         (Y_MIN_POS + 50)
+#define LEVELING_POINT_2_X         (X_MAX_POS - 50)
+#define LEVELING_POINT_2_Y         (Y_MIN_POS + 50)
+#define LEVELING_POINT_3_X         (X_MAX_POS - 50)
+#define LEVELING_POINT_3_Y         (Y_MAX_POS - 50)
+#define LEVELING_POINT_4_X         (X_MIN_POS + 50)
+#define LEVELING_POINT_4_Y         (Y_MAX_POS - 50)
 #define LEVELING_POINT_Z           0.2f  // Z-axis position when nozzle stays for leveling
 #define LEVELING_POINT_MOVE_Z      10.0f // Z-axis position when nozzle move to next point
 #define LEVELING_POINT_XY_FEEDRATE 6000  // (mm/min) X and Y axes move feedrate
@@ -262,10 +262,10 @@
 #define CUSTOM_5_GCODE "M501\n"
 #define CUSTOM_6_LABEL "EEPROM Defaults"
 #define CUSTOM_6_GCODE "M502\n"
-//#define CUSTOM_7_LABEL "Custom7"
-//#define CUSTOM_7_GCODE "M105\n"
-//#define CUSTOM_8_LABEL "Custom8"
-//#define CUSTOM_8_GCODE "M105\n"
+//#define CUSTOM_7_LABEL "Disable prevent cold"
+//#define CUSTOM_7_GCODE "M302 P1\n"
+//#define CUSTOM_8_LABEL "Enable prevent cold"
+//#define CUSTOM_8_GCODE "M302 01\n"
 //#define CUSTOM_9_LABEL "Custom9"
 //#define CUSTOM_9_GCODE "M105\n"
 //#define CUSTOM_10_LABEL "Custom10"
