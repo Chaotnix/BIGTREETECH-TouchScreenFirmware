@@ -89,7 +89,7 @@
  * Default value is: 1 for LED_OFF
  *
 */
-#define STARTUP_KNOB_LED_COLOR 7 //LED_OFF
+#define STARTUP_KNOB_LED_COLOR 1 //LED_OFF
 
 //===========================================================================
 //============================ TFT Mode Settings ============================
@@ -265,8 +265,8 @@
 #define CUSTOM_5_GCODE "M501\n"
 #define CUSTOM_6_LABEL "EEPROM Defaults"
 #define CUSTOM_6_GCODE "M502\n"
-//#define CUSTOM_7_LABEL "Disable prevent cold"
-//#define CUSTOM_7_GCODE "M302 P1\n"
+#define CUSTOM_7_LABEL "Disable prevent cold"
+#define CUSTOM_7_GCODE "M302 P1\n"
 //#define CUSTOM_8_LABEL "Enable prevent cold"
 //#define CUSTOM_8_GCODE "M302 01\n"
 //#define CUSTOM_9_LABEL "Custom9"
